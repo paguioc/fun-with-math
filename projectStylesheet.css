@@ -1,0 +1,3155 @@
+@font-face {
+  font-family: 'Playtime';
+  src: url('fonts/playtime.ttf');
+}
+
+/*
+  Laptop resolution
+
+  Source for the media queries: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
+*/
+@media (min-width: 1025px) and (max-width: 1380px) {
+
+  body {
+    background: url(images/bg.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    margin: 20px 20px;
+  }
+
+  /*
+    styles for the sun
+    Source: http://thecodeplayer.com/walkthrough/pure-css-sun-animation
+  */
+  #sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 300px;
+    margin-top: -300px;
+    background-color: transparent;
+  }
+
+  #sun *, #sun *:before, #sun *:after{
+    position: absolute;
+  }
+
+  /* code for the rings */
+  .sunRays {
+      background-color: transparent;
+  }
+
+  #rings {
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: transparent;
+  }
+
+  #rings div:before, #rings div:after {
+    content: "";
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    background: inherit;
+  }
+
+  #rings div:before {
+    transform: rotate(60deg);
+  }
+
+  #rings div:after {
+    transform: rotate(-60deg);
+  }
+
+  #rings div:nth-child(even) {
+    animation: rotateR 12s infinite linear;
+  }
+
+  #rings div:nth-child(odd) {
+    animation: rotateL 12s infinite linear;
+    transform: rotate(15deg);
+  }
+
+  #rings div:nth-child(1) {
+    animation-duration: 45s;
+    background: rgba(255, 230, 84, 0.5);
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+  }
+
+  #rings div:nth-child(2) {
+    animation-duration: 49s;
+    background: rgba(255, 185, 6, 0.5);
+    width: 190px;
+    height: 190px;
+    margin: -95px 0 0 -95px;
+  }
+
+  #rings div:nth-child(3) {
+    animation-duration: 56s;
+    background: rgba(255, 130, 5, 0.5);
+    width: 180px;
+    height: 180px;
+    margin: -90px 0 0 -90px;
+  }
+
+
+  /* animations */
+  @-webkit-keyframes rotateR {
+    from{
+      -webkit-transform: rotate(0deg);
+    }
+    to{
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes rotateR{
+    from{
+      -moz-transform: rotate(0deg);
+    }
+    to{
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-ms-keyframes rotateR{
+    from{
+      -ms-transform: rotate(0deg);
+    }
+    to{
+      -ms-transform: rotate(360deg);
+    }
+  }
+  @-o-keygrames rotateR{
+    from{
+      -o-transform: rotate(0deg);
+    }
+    to{
+      -o-transform: rotate(360deg);
+    }
+  }
+  @keyframes rotateR{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rotateL{
+    from{
+      -webkit-transform: rotate(360deg);
+    }
+    to{
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  @-moz-keyframes rotateL{
+    from{
+      -moz-transform: rotate(360deg);
+    }
+    to{
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  @-ms-keyframes rotateL{
+    from{
+      -ms-transform: rotate(360deg);
+    }
+    to{
+      -ms-transform: rotate(0deg);
+    }
+  }
+  @-o-keyframes rotateL{
+    from{
+      -o-transform: rotate(360deg);
+    }
+    to{
+      -o-transform: rotate(0deg)
+    }
+  }
+  @keyframes rotateL{
+    from{
+      transform: rotate(360deg);
+    }
+    to{
+      transform: rotate(0deg);
+    }
+  }
+
+  /*
+    styles for the home page
+  */
+
+  #title {
+    font-family: 'Playtime';
+    color: #FF8C00;
+    letter-spacing: 2px;
+    font-size: 150px;
+  }
+
+
+  div#titleDiv {
+    background-color: transparent;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+  }
+
+
+  img#barnHome {
+    height: 400px;
+    width: 400px;
+    float: right;
+    margin-top: -130px;
+  }
+
+
+  img#pigHome {
+    height: 400px;
+    width: 400px;
+    margin-top: -60px;
+  }
+
+  button#startButton {
+    font-family: 'Playtime';
+    font-size: 60px;
+    border: 1px solid black;
+    background-color: white;
+    width: 150px;
+    float: right;
+    margin-top: 300px;
+    margin-right: -300px;
+  }
+
+
+  /*
+    Styles for levels page
+  */
+  img#farmerID {
+    height: 400px;
+    width: 350px;
+    margin-top: 175px;
+  }
+
+
+  div#farmerMessageDiv {
+    width: 280px;
+    border: 1px solid black;
+    border-radius: 80px;
+    height: 170px;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -480px;
+  }
+
+
+  p.farmerMessage {
+    width: 240px;
+    text-align: center;
+    font-family: 'playtime';
+    margin-left: 15px;
+    font-size: 20px;
+  }
+
+
+  div#buttonLevel {
+    float: right;
+    background-color: transparent;
+    margin-top: -535px;
+    margin-right: 500px;
+  }
+
+
+  button.levelButton {
+    font-family: 'playtime';
+    border: 1px solid black;
+    background-color: orange;
+    border-radius: 50px;
+    font-size: 40px;
+    margin: 55px;
+    width: 170px;
+    height: 60px;
+  }
+
+
+  div#descDivContainer {
+    float: right;
+    margin-top: -540px;
+    margin-right: 220px;
+    background-color: transparent;
+  }
+
+
+  div.descDiv {
+    width: 240px;
+    height: 150px;
+    background-color: transparent;
+  }
+
+
+  p.levelDesc {
+    text-align: center;
+    width: 250px;
+    font-size: 30px;
+    font-family: 'Playtime';
+    margin-left: 8px;
+  }
+
+  /* styles for question-answer game
+    Sources:
+    -background image: https://css-tricks.com/perfect-full-page-background-image/
+  */
+
+  #qAInstructions {
+    font-family: 'Playtime';
+    font-size: 25px;
+    line-height: inherit;
+    margin-top: 42px;
+    width: 225px;
+    margin-left: 3px;
+    text-align: center;
+  }
+
+  #resultC, #resultW {
+    text-align: center;
+    font-size: 60px;
+    line-height: 0px;
+    margin-top: 90px;
+    font-family: 'Playtime';
+  }
+
+
+  p.question {
+    margin-top: 50px;
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 350px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 100px;
+    text-align: center;
+    width: 500px;
+    height: auto;
+    font-family: 'Playtime';
+  }
+
+
+  p.answerInputlabel {
+    display: inline;
+    margin-left: -10px;
+    margin-right: auto;
+    font-size: 40px;
+    font-family: 'Playtime';
+  }
+
+  img.pig {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: block;
+  }
+
+
+  #pigGame1 {
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: none;
+    background-color: transparent;
+  }
+
+  div#answerDiv {
+    height: 170px;
+    width: 230px;
+    display: block;
+    border: 1px solid black;
+    background: white;
+    border-radius: 100px;
+    float: left;
+    position: absolute;
+    margin-left: 195px;
+    margin-top: -57px;
+    box-sizing: content-box;
+  }
+
+
+  div#userAnswerDiv {
+    background-color: transparent;
+    width: 700px;
+    float: right;
+    margin-right: 270px;
+  }
+
+
+  p.questionH {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 70px;
+    padding: 16px;
+    font-size: 130px;
+    text-align: center;
+    width: 555px;
+    height: auto;
+    font-family: 'Playtime';
+  }
+
+  div.answerDisplayH {
+    height: 500px;
+    width: 600px;
+    border: none;
+    float: left;
+    margin-top: 54px;
+    margin-left: 15px;
+    background-color: transparent;
+  }
+
+  div.answerDisplay {
+    height: 500px;
+    width: 600px;
+    border: none;
+    float: left;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: transparent;
+  }
+
+
+  #submit {
+    font-size: 28px;
+    background: white;
+    margin-left: 10px;
+    height: 53px;
+    width: 176px;
+    position: absolute;
+    font-family: 'Playtime';
+  }
+
+  input[type="text"] {
+    font-size: 40px;
+    font-family: 'Playtime';
+  }
+
+  /*
+    styles for transition and end of level page elements
+  */
+  #pig2 {
+    height: 350px;
+    width: 350px;
+  }
+
+  img.prize {
+    height: 300px;
+    width: 290px;
+    margin-top: 130px;
+    margin-left: 850px;
+  }
+
+  p.transitionText {
+    font-size: 25px;
+    text-align: center;
+    width: 290px;
+    margin-top: 40px;
+    margin-left: 9px;
+    font-family: 'Playtime';
+  }
+
+  button.nextChallenge {
+    float: right;
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-right: 170px;
+    background-color: white;
+    font-family: 'Playtime';
+  }
+
+  button.nextLevel {
+    float: right;
+    height: 36px;
+    width: 140px;
+    font-size: 25px;
+    margin-top: 14px;
+    background-color: white;
+    font-family: 'Playtime';
+    border: 1px solid black;
+    margin-right: 279px;
+  }
+
+  button#homePage {
+    border: 1px solid black;
+    background-color: white;
+    font-size: 25px;
+    margin: 15px;
+    width: 160px;
+    font-family: 'Playtime';
+  }
+
+  button.seeFarm {
+    border: 1px solid black;
+    background-color: white;
+    font-size: 25px;
+    margin: 15px;
+    width: 140px;
+    font-family: 'Playtime';
+  }
+
+  div.messageDiv {
+    height: 200px;
+    width: 310px;
+    background: white;
+    border-radius: 100px;
+    float: right;
+    border: 1px solid black;
+    box-sizing: content-box;
+    font-family: 'Playtime';
+  }
+
+  div.transitionContainerDiv {
+    height: 800px;
+    width: 600px;
+    float: left;
+    margin-left: 60px;
+    margin-top: -425px;
+    border: none;
+    background-color: transparent;
+  }
+
+
+  div#buttonDiv {
+    background-color: transparent;
+    margin-left: 703px;
+    position: absolute;
+    margin-top: 50px;
+    width: 800px;
+  }
+
+  /*
+    styles for the matching game
+  */
+  #matchInstructions {
+    font-size: 25px;
+    font-family: 'Playtime';
+    width: 240px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+
+  div.error {
+    font-size: 155px;
+    color: red;
+    padding-left: 30px;
+  }
+
+
+  #numberImage {
+    border: none;
+    float: left;
+    margin-left: 534px;
+    margin-bottom: 200px;
+    background-color: transparent;
+  }
+
+  div.numberDiv {
+    height: 170px;
+    width: 170px;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    display: table;
+  }
+
+  #numberText {
+    border: none;
+    float: right;
+    margin-right: 200px;
+    margin-top: -30px;
+    background-color: transparent;
+
+  }
+
+  div.text {
+    background-color: transparent;
+    border: none;
+    width: 170px;
+    height: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  div.box {
+    border: 1px solid black;
+    height: 170px;
+    width: 170px;
+  }
+
+  img {
+    height: 120px;
+    width: 100px;
+    display: block;
+    padding: 20px;
+  }
+
+
+  p {
+    font-family: 'Playtime';
+  }
+
+
+  /*
+    Styles for the memory game elements
+  */
+  .mcInstructions{
+    font-family: 'Playtime';
+    margin-left: 20px;
+    font-size: 40px;
+  }
+
+
+  .card {
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+    box-sizing: border-box;
+  }
+
+  .card, .back, .front {
+    height: 150px;
+    width: 150px;
+  }
+
+  .back, .front {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .front {
+
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+    z-index: 2;
+  }
+
+  .back {
+    background-color: orange;
+    box-sizing: border-box;
+  }
+
+  div {
+    box-sizing: border-box;;
+    background-color: white;
+    height: 90px;
+    width: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  div.game {
+    width: auto;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  div.selected {
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+  }
+
+  .match .back {
+    background-color: white !important;
+    border: 4px solid green;
+  }
+
+  .grid {
+    max-width: 980px;
+    max-height: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+  }
+
+  /*
+    Multiple choice elements styles
+
+    Sources:
+    -centering divs inside a div: https://stackoverflow.com/questions/1269245/centering-floating-divs-within-another-div
+    -placing button to document's bottom right side: https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_bottom_right
+  */
+  .mCInstructionsDiv {
+    border: 1px solid black;
+    width: 270px;
+    height: 170px;
+    border-radius: 100px;
+    margin-left: 180px;
+    position: absolute;
+    margin-top: 280px;
+    padding: 10px;
+  }
+
+
+  .mCInstructionsContainerDiv {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: transparent;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  img.pig3 {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin-top: 350px;
+  }
+
+
+  p.multipleChoiceInstructions {
+    font-size: 20px;
+    text-align: center;
+    width: 250px;
+    margin-top: 20px;
+    font-family: 'Playtime';
+  }
+
+  .multipleChoiceHardInstructions {
+    font-size: 25px;
+    text-align: center;
+    width: 180px;
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Playtime';
+  }
+
+  #questionMCContainer {
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 250px;
+    width: 750px;
+    margin-right: 50px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    max-width: 800px;
+  }
+
+  #questionEasyMCContainer {
+    float: right;
+    display: table;
+    height: 250px;
+    width: 750px;
+    margin-right: 50px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    max-width: 800px;
+  }
+
+
+  #questionMCHardContainer {
+    float: right;
+    display: table;
+    height: 250px;
+    width: 750px;
+    margin-right: 50px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    max-width: 800px;
+  }
+
+  .mCImage {
+    margin: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    height: auto;
+    width: 75px;
+    background-color: transparent;
+  }
+
+
+  .mCHardImage {
+    margin: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 200px;
+    background-color: transparent;
+  }
+
+
+  #optionsMCDiv {
+    background-color: transparent;
+    float: right;
+    width: 733px;
+    display: inline-table;
+    justify-content: center;
+    margin-top: 130px;
+    margin-right: 40px;
+  }
+
+
+  label {
+    margin: 60px;
+    font-size: 60px;
+    font-family: 'Playtime';
+  }
+
+
+  input#optionA, input#optionB, input#optionC {
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+  }
+
+
+  #submitMCButton {
+    margin-top: 520px;
+    margin-left: 1100px;
+    background-color: white;
+    font-size: 25px;
+    position: absolute;
+    height: 50px;
+    width: 120px;
+    font-family: 'Playtime';
+  }
+
+
+  #mCResultC, #mCResultW {
+    text-align: center;
+    font-size: 55px;
+    margin-top: 40px;
+    margin-right: 25px;
+    width: 215px;
+    font-family: 'Playtime';
+  }
+
+
+  img.barn {
+    height: 250px;
+    width: 240px;
+    float: right;
+    margin-right: 100;
+    margin-top: -50px;
+  }
+
+
+  /*
+    prizes elements styles
+  */
+  img#farmerPrize {
+    height: 200px;
+    width: 160px;
+    margin-top: 350px;
+    margin-left: 10px;
+  }
+
+
+  img#barnPrize {
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin-top: -435px;
+  }
+
+
+  img#chickenPrize {
+    height: 70px;
+    width: 50px;
+    float: right;
+    margin-top: -110px;
+    margin-right: 300px;
+  }
+
+
+  img#chicken2Prize {
+    height: 60px;
+    width: 50px;
+    float: right;
+    margin-top: -105px;
+    margin-right: 380px;
+  }
+
+  img#goat2Prize {
+    height: 80px;
+    width: 70px;
+    float: right;
+    margin-top: -193px;
+    margin-right: 20px;
+  }
+
+  img#chickPrize {
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin-top: -135px;
+    margin-right: 430px;
+  }
+
+  img#chickPrizeM {
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin-top: -135px;
+    margin-right: 430px;
+  }
+
+
+  img#sheepPrize {
+    height: 80px;
+    width: 80px;
+    float: right;
+    margin-top: -300px;
+    margin-right: 700px;
+  }
+
+  img#sheepPrizeM {
+    height: 80px;
+    width: 80px;
+    float: right;
+    margin-top: -250px;
+    margin-right: 600px;
+  }
+
+  img#pigPrize {
+    height: 80px;
+    width: 110px;
+    float: right;
+    margin-top: -250px;
+    margin-right: 480px;
+  }
+
+
+  img#goatPrize {
+    height: 85px;
+    width: 85px;
+    margin-left: 400px;
+    margin-top: -177px;
+  }
+
+
+  img#cowPrize {
+    height: 90px;
+    width: 85px;
+    float: left;
+    margin-top: -120px;
+    margin-left: 150px;
+  }
+
+
+  img#donkeyPrize {
+    height: 85px;
+    width: 85px;
+    margin-top: -179px;
+    margin-left: 250px;
+  }
+
+
+  img#duckPrize {
+    height: 75px;
+    width: 60px;
+    margin-left: 500px;
+    margin-top: 25px;
+  }
+
+
+  button#backHomePrizeButton {
+    float: right;
+    margin-top: -70px;
+    margin-right: 48px;
+    font-size: 30px;
+    background-color: white;
+    font-family: 'Playtime';
+  }
+
+
+  img#tree {
+    margin-top: -500px;
+    margin-left: 100px;
+    height: 320px;
+    width: 250px;
+  }
+
+  img#treeE {
+    margin-top: -450px;
+    margin-left: 100px;
+    height: 320px;
+    width: 250px;
+  }
+
+  img#treeM {
+    margin-top: -400px;
+    margin-left: 100px;
+    height: 320px;
+    width: 250px;
+  }
+
+}
+
+
+/* styles for small landscape devices */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+      background: url(images/bg.png) no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      overflow: hidden;
+      margin: 20px 20px;
+    }
+    /*
+      styles for the sun
+      Source: http://thecodeplayer.com/walkthrough/pure-css-sun-animation
+    */
+    #sun{
+      position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	margin: -150px 0 0 -150px;
+    	width: 300px;
+    	height: 300px;
+      margin-top: -200px;
+      background-color: transparent;
+    }
+
+    #sun *, #sun *:before, #sun *:after{
+    	position: absolute;
+    }
+
+    /* code for the rings */
+    .sunRays {
+        background-color: transparent;
+    }
+
+    #rings{
+    	top: 50%;
+    	left: 50%;
+    	z-index: 1;
+      background-color: transparent;
+    }
+
+    #rings div:before, #rings div:after{
+    	content: "";
+    	z-index: 2;
+    	top: 0;
+    	left: 0;
+    	height: inherit;
+    	width: inherit;
+    	background: inherit;
+    }
+
+    #rings div:before{
+    	transform: rotate(60deg);
+    }
+
+    #rings div:after{
+    	transform: rotate(-60deg);
+    }
+
+    #rings div:nth-child(even){
+    	animation: rotateR 12s infinite linear;
+    }
+
+    #rings div:nth-child(odd){
+    	animation: rotateL 12s infinite linear;
+    	transform: rotate(15deg);
+    }
+
+    #rings div:nth-child(1){
+    	animation-duration: 45s;
+    	background: rgba(255, 230, 84, 0.5);
+    	width: 100px;
+    	height: 100px;
+    	margin: -100px 0 0 -100px;
+    }
+
+    #rings div:nth-child(2){
+    	animation-duration: 49s;
+    	background: rgba(255, 185, 6, 0.5);
+    	width: 90px;
+    	height: 90px;
+    	margin: -95px 0 0 -95px;
+    }
+
+    #rings div:nth-child(3){
+    	animation-duration: 56s;
+    	background: rgba(255, 130, 5, 0.5);
+    	width: 80px;
+    	height: 80px;
+    	margin: -90px 0 0 -90px;
+    }
+
+
+    /* animations */
+    @-webkit-keyframes rotateR{
+    	from{
+    		-webkit-transform: rotate(0deg);
+    	}
+    	to{
+    		-webkit-transform: rotate(360deg);
+    	}
+    }
+
+    @-moz-keyframes rotateR{
+    	from{
+    		-moz-transform: rotate(0deg);
+    	}
+    	to{
+    		-moz-transform: rotate(360deg);
+    	}
+    }
+
+    @-ms-keyframes rotateR{
+    	from{
+    		-ms-transform: rotate(0deg);
+    	}
+    	to{
+    		-ms-transform: rotate(360deg);
+    	}
+    }
+
+    @-o-keygrames rotateR{
+    	from{
+    		-o-transform: rotate(0deg);
+    	}
+    	to{
+    		-o-transform: rotate(360deg);
+    	}
+    }
+
+    @keyframes rotateR{
+    	from{
+    		transform: rotate(0deg);
+    	}
+    	to{
+    		transform: rotate(360deg);
+    	}
+    }
+
+    @-webkit-keyframes rotateL{
+    	from{
+    		-webkit-transform: rotate(360deg);
+    	}
+    	to{
+    		-webkit-transform: rotate(0deg);
+    	}
+    }
+
+    @-moz-keyframes rotateL{
+    	from{
+    		-moz-transform: rotate(360deg);
+    	}
+    	to{
+    		-webkit-transform: rotate(0deg);
+    	}
+    }
+
+    @-ms-keyframes rotateL{
+    	from{
+    		-ms-transform: rotate(360deg);
+    	}
+    	to{
+    		-ms-transform: rotate(0deg);
+    	}
+    }
+
+    @-o-keyframes rotateL{
+    	from{
+    		-o-transform: rotate(360deg);
+    	}
+    	to{
+    		-o-transform: rotate(0deg)
+    	}
+    }
+
+    @keyframes rotateL{
+    	from{
+    		transform: rotate(360deg);
+    	}
+    	to{
+    		transform: rotate(0deg);
+    	}
+    }
+
+    body {
+      background: url(images/bg.png) no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      overflow: hidden;
+      margin: 20px 0px;
+    }
+
+    /*
+      styles for the home page
+    */
+    #title {
+      font-family: 'Playtime';
+      color: #FF8C00;
+      letter-spacing: 2px;
+      font-size: 90px;
+    }
+
+
+    div#titleDiv {
+      background-color: transparent;
+      width: 500px;
+      height: 200px;
+      text-align: center;
+      margin: auto;
+    }
+
+
+    img#barnHome {
+      height: 200px;
+      width: 200px;
+      float: right;
+      margin-top: -130px;
+    }
+
+
+    img#pigHome {
+      height: 200px;
+      width: 200px;
+      margin-top: -100px;
+    }
+
+    button#startButton {
+      font-family: 'Playtime';
+      font-size: 30px;
+      border: 1px solid black;
+      background-color: white;
+      width: 90px;
+      float: right;
+      margin-top: 100px;
+      margin-right: -165px;
+    }
+
+
+    /*
+      Styles for levels page
+    */
+    img#farmerID {
+      height: 200px;
+      width: 150px;
+      margin-top: 150px;
+    }
+
+
+    div#farmerMessageDiv {
+      width: 230px;
+      border: 1px solid black;
+      border-radius: 80px;
+      height: 135px;
+      position: absolute;
+      margin-left: 130px;
+      margin-top: -275px;
+    }
+
+
+    p.farmerMessage {
+      width: 200px;
+      text-align: center;
+      font-family: 'playtime';
+      margin-left: 15px;
+    }
+
+
+    div#buttonLevel {
+      float: right;
+      background-color: transparent;
+      margin-top: -350px;
+      margin-right: 200px;
+    }
+
+
+    button.levelButton {
+      font-family: 'playtime';
+      border: 1px solid black;
+      border-radius: 50px;
+      background-color: orange;
+      font-size: 25px;
+      margin: 30px;
+      width: 100px;
+    }
+
+    div#descDivContainer {
+      float: right;
+      margin-top: -370px;
+      margin-right: 70px;
+      background-color: transparent;
+    }
+
+    div.descDiv {
+      width: 140px;
+      height: 80px;
+      margin: 10px;
+      background-color: transparent;
+    }
+
+
+    p.levelDesc {
+      margin-top: 20px;
+      text-align: center;
+      width: 120px;
+      font-family: 'playtime';
+      margin-left: 8px;
+    }
+
+  /* styles for question-answer game
+    Sources:
+    -background image: https://css-tricks.com/perfect-full-page-background-image/
+  */
+    #qAInstructions {
+      font-family: 'Playtime';
+      font-size: 15px;
+      line-height: inherit;
+      margin-top: 25px;
+      width: 130px;
+      margin-left: 10px;
+      text-align: center;
+    }
+
+    #resultC, #resultW {
+      text-align: center;
+      font-size: 30px;
+      line-height: 0px;
+      margin-top: 50px;
+      font-family: 'Playtime';
+    }
+
+
+    div#userAnswerDiv {
+      background-color: transparent;
+      float: right;
+      width: 300px;
+      margin-right: 150px;
+    }
+
+    p.question {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid rgb(100, 100, 100);
+      border-radius: 50px;
+      padding: 16px;
+      font-size: 60px;
+      text-align: center;
+      width: 200px;
+      font-family: 'Playtime';
+    }
+
+    p.questionH {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      margin-left: 170px;
+      margin-right: auto;
+      border: 1px solid rgb(100, 100, 100);
+      border-radius: 50px;
+      padding: 16px;
+      font-size: 60px;
+      text-align: center;
+      width: 300px;
+      font-family: 'Playtime';
+    }
+
+    p.answerInputlabel {
+      display: inline;
+      margin-left: -10px;
+      margin-right: auto;
+      font-size: 20px;
+      font-family: 'Playtime';
+    }
+
+    img.pig {
+      height: 120px;
+      width: 120px;
+      margin: auto;
+      display: block;
+    }
+
+
+    #pigGame1 {
+      float: left;
+      height: 150px;
+      width: 150px;
+      border: none;
+      background-color: transparent;
+    }
+
+    div#answerDiv {
+      height: 100px;
+      width: 150px;
+      display: block;
+      border: 1px solid black;
+      background: white;
+      border-radius: 60px;
+      float: left;
+      position: absolute;
+      margin-left: 142px;
+      margin-top: -10px;
+      box-sizing: content-box;
+    }
+
+    input[type="text"] {
+      font-family: 'Playtime';
+    }
+
+    div.answerDisplay {
+      height: 200px;
+      width: 200px;
+      border: none;
+      float: left;
+      margin-top: 40px;
+      background-color: transparent;
+    }
+
+    div.answerDisplayH {
+      height: 200px;
+      width: 200px;
+      border: none;
+      float: left;
+      margin-top: 40px;
+      background-color: transparent;
+    }
+
+    #submit {
+      font-size: 15px;
+      background: white;
+      margin-left: 10px;
+      font-family: 'Playtime';
+    }
+
+    /* styles for transition and end of level page elements */
+    #pig2 {
+      height: 150px;
+      width: 150px;
+    }
+
+    img.prize {
+      height: 200px;
+      width: 190px;
+      float: right;
+      margin-top: 70px;
+      margin-right: 50px;
+    }
+
+    p.transitionText {
+      font-size: 15px;
+      text-align: center;
+      width: 180px;
+      margin-top: 30px;
+      margin-left: 5px;
+      font-family: 'Playtime';
+    }
+
+    button.nextChallenge {
+      float: right;
+      height: 30px;
+      width: 130px;
+      font-size: 15px;
+      margin-top: 300px;
+      margin-right: -180px;
+      background-color: white;
+      font-family: 'Playtime';
+    }
+
+    button.nextLevel {
+      float: right;
+      height: 23px;
+      width: 100px;
+      font-size: 15px;
+      margin-top: -38px;
+      background-color: white;
+      font-family: 'Playtime';
+      border: 1px solid black;
+      margin-right: 320px;
+    }
+
+    button#homePage {
+      border: 1px solid black;
+      background-color: white;
+      font-size: 15px;
+      margin: 15px;
+      width: 100px;
+      font-family: 'Playtime';
+    }
+
+    button.seeFarm {
+      border: 1px solid black;
+      background-color: white;
+      font-size: 15px;
+      margin: 15px;
+      width: 90px;
+      font-family: 'Playtime';
+    }
+
+    div#buttonEndDiv {
+      background-color: transparent;
+      margin-left: 372px;
+      position: absolute;
+      margin-top: 290px;
+      width: 250px;
+    }
+
+    div.messageDiv {
+      height: 130px;
+      width: 190px;
+      background: white;
+      border-radius: 100px;
+      float: right;
+      border: 1px solid black;
+      box-sizing: content-box;
+      font-family: 'Playtime';
+    }
+
+    div.transitionContainerDiv {
+      height: 100px;
+      width: 300px;
+      float: left;
+      margin-left: 25px;
+      border: none;
+      background-color: transparent;
+    }
+
+
+    div#buttonDiv {
+      background-color: transparent;
+      margin-left: 380px;
+      position: absolute;
+      margin-top: 300px;
+      width: 300px;
+    }
+
+    /* styles for the matching game */
+    #matchInstructions {
+      font-size: 15px;
+      font-family: 'Playtime';
+      width: 140px;
+      text-align: center;
+      margin-left: 11px;
+      margin-top: 24px;
+    }
+
+
+    div.error {
+      font-size: 90px;
+      color: red;
+      padding-left: 12px;
+    }
+
+
+    #numberImage {
+      border: none;
+      float: right;
+      margin-right: 300px;
+      margin-bottom: 202px;
+      margin-top: -195px;
+      background-color: transparent;
+    }
+
+    div.numberDiv {
+      height: 70px;
+      width: 70px;
+      margin-top: 10px;
+      text-align: center;
+      border: 1px solid black;
+      display: table;
+    }
+
+    #numberText {
+      border: none;
+      float: left;
+      margin-left: 500px;
+      background-color: transparent;
+      margin-top: -318px;
+    }
+
+    div.text {
+      background-color: transparent;
+      border: none;
+      width: 70px;
+      height: 15px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      font-size: 15px;
+      text-align: center;
+      margin-left: 11px;
+      font-family: 'Playtime';
+    }
+
+    div.box {
+      border: 1px solid black;
+    }
+
+    img {
+      height: 60px;
+      width: 55px;
+      display: block;
+      padding: 20px;
+    }
+
+    /*
+      Styles for the memory game elements
+    */
+    .mcInstructions{
+      font-family: 'Playtime';
+      margin-left: 20px;
+    }
+
+
+    .card {
+      position: relative;
+      transition: all .4s linear;
+      transform-style: preserve-3d;
+      margin: 5px;
+      box-sizing: border-box;
+    }
+
+    .card, .back, .front {
+      height: 90px;
+      width: 90px;
+    }
+
+    .back, .front {
+      position: absolute;
+      backface-visibility: hidden;
+    }
+
+    .front {
+
+      box-sizing: border-box;
+      transform: rotateY(180deg);
+      z-index: 2;
+    }
+
+    .back {
+      background-color: orange;
+      box-sizing: border-box;
+    }
+
+    div {
+      box-sizing: border-box;;
+      background-color: white;
+      height: 90px;
+      width: 90px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    div.game {
+      width: auto;
+      box-sizing: border-box;
+      background-color: transparent;
+    }
+
+    div.selected {
+      transform: rotateY(180deg);
+      box-sizing: border-box;
+    }
+
+    .match .back {
+      background-color: white !important;
+      border: 4px solid green;
+    }
+
+    .grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      box-sizing: border-box;
+    }
+
+  /*
+    Multiple choice elements styles
+
+    Sources:
+    -centering divs inside a div: https://stackoverflow.com/questions/1269245/centering-floating-divs-within-another-div
+    -placing button to document's bottom right side: https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_bottom_right
+    -
+  */
+    .mCInstructionsDiv {
+      border: 1px solid black;
+      width: 165px;
+      border-radius: 50px;
+      margin-left: 70px;
+      position: absolute;
+      margin-top: 140px;
+      height: 100px;
+    }
+
+
+    .mCInstructionsContainerDiv {
+      height: 200px;
+      width: 200px;
+      background-color: transparent;
+    }
+
+    img.pig3 {
+      height: 90px;
+      width: 90px;
+      position: absolute;
+      margin-top: 220px;
+    }
+
+
+    p.multipleChoiceInstructions {
+      font-size: 13px;
+      text-align: center;
+      width: 140px;
+      margin: auto;
+      margin-top: 13px;
+      font-family: 'Playtime';
+    }
+
+    .multipleChoiceHardInstructions {
+      font-size: 15px;
+      text-align: center;
+      width: 130px;
+      margin: auto;
+      margin-top: 10px;
+      font-family: 'Playtime';
+    }
+
+    #questionEasyMCContainer {
+      float: right;
+      display: table;
+      height: 150px;
+      width: 400px;
+      margin-top: -200px;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 50px;
+      max-width: 500px;
+    }
+
+    #questionMCContainer {
+      float: right;
+      display: table;
+      height: 150px;
+      width: 400px;
+      margin-top: -200px;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 50px;
+      max-width: 500px;
+    }
+
+
+    #questionMCHardContainer {
+      float: right;
+      display: table;
+      height: 150px;
+      width: 400px;
+      margin-top: -200px;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 50px;
+      max-width: 500px;
+    }
+
+
+    .mCImage {
+      margin: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      height: auto;
+      width: 34px;
+      background-color: transparent;
+    }
+
+    .mCHardImage {
+      margin: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      width: 200px;
+      background-color: transparent;
+    }
+
+
+    #optionsMCDiv {
+      background-color: transparent;
+      float: right;
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      margin-right: 10px;
+    }
+
+
+    label {
+      margin: 20px;
+      font-size: 30px;
+      font-family: 'Playtime';
+    }
+
+
+    input#optionA, input#optionB, input#optionC {
+      margin: 10px;
+    }
+
+
+    #submitMCButton {
+      margin-left: 200px;
+      margin-right: 30px;
+      background-color: white;
+      font-size: 15px;
+      position: absolute;
+      bottom: 35px;
+      right: 16px;
+      font-family: 'Playtime';
+    }
+
+    button#tryAgainButton {
+      margin-left: 200px;
+      margin-right: 30px;
+      background-color: white;
+      font-size: 15px;
+      position: absolute;
+      bottom: 35px;
+      right: 16px;
+      font-family: 'Playtime';
+    }
+
+    #mCResultC, #mCResultW {
+      text-align: center;
+      font-size: 30px;
+      line-height: 0px;
+      margin-top: 45px;
+      font-family: 'Playtime';
+    }
+
+
+    img.barn {
+      height: 250px;
+      width: 240px;
+      float: right;
+      margin-right: 100;
+      margin-top: -50px;
+    }
+
+    /*
+      prizes elements styles
+    */
+    img#farmerPrize {
+      height: 100px;
+      width: 80px;
+      margin-top: 200px;
+    }
+
+
+    img#barnPrize {
+      height: 200px;
+      width: 200px;
+      float: right;
+      margin-top: -300px;
+    }
+
+
+    img#chickenPrize {
+      height: 40px;
+      width: 30px;
+      float: right;
+      margin-top: -110px;
+      margin-right: 180px;
+    }
+
+    img#chicken2Prize {
+      height: 40px;
+      width: 30px;
+      float: right;
+      margin-top: -80px;
+      margin-right: 180px;
+    }
+
+    img#goat2Prize {
+      height: 40px;
+      width: 30px;
+      float: right;
+      margin-top: -150px;
+      margin-right: 20px;
+    }
+
+    img#chickPrize {
+      height: 20px;
+      width: 20px;
+      float: right;
+      margin-top: -170px;
+      margin-right: 430px;
+    }
+
+    img#chickPrizeM {
+      height: 20px;
+      width: 20px;
+      float: right;
+      margin-top: -150px;
+      margin-right: 430px;
+    }
+
+
+    img#sheepPrize {
+      height: 40px;
+      width: 40px;
+      float: right;
+      margin-top: -190px;
+      margin-right: 250px;
+    }
+
+    img#sheepPrizeM {
+      height: 40px;
+      width: 40px;
+      float: right;
+      margin-top: -150px;
+      margin-right: 250px;
+    }
+
+    img#pigPrize {
+      height: 50px;
+      width: 55px;
+      float: right;
+      margin-top: -100px;
+      margin-right: 250px;
+    }
+
+
+    img#goatPrize {
+      height: 45px;
+      width: 45px;
+      margin-left: 200px;
+      margin-top: -100px;
+    }
+
+
+    img#cowPrize {
+      height: 50px;
+      width: 45px;
+      float: left;
+      margin-top: -150px;
+      margin-left: 100px;
+    }
+
+
+    img#donkeyPrize {
+      height: 45px;
+      width: 45px;
+      margin-top: -150px;
+      margin-left: 250px;
+    }
+
+
+    img#duckPrize {
+      height: 35px;
+      width: 30px;
+      margin-left: 100px;
+      margin-top: 25px;
+    }
+
+
+    button#backHomePrizeButton {
+      float: right;
+      margin-top: -30px;
+      margin-right: 50px;
+      font-size: 13px;
+      background-color: white;
+      font-family: 'Playtime';
+    }
+
+
+    img#tree {
+      margin-top: -320px;
+      height: 200px;
+      width: 150px;
+    }
+
+
+    img#treeE {
+      margin-top: -245px;
+      margin-left: 15px;
+      height: 150px;
+      width: 120px;
+    }
+
+
+    img#treeM {
+      margin-top: -220px;
+      height: 200px;
+      width: 150px;
+    }
+}
+
+
+
+/*
+  styles for tablet devices in landscape mode
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  body {
+    background: url(images/bg.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    margin: 20px 20px;
+  }
+/*
+  styles for the homepage
+*/
+
+  div#titleDiv {
+    background-color: transparent;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 220px;
+  }
+
+
+  #title {
+    font-family: 'Playtime';
+    color: #FF8C00;
+    letter-spacing: 2px;
+    font-size: 135px;
+  }
+
+
+  img#barnHome {
+    height: 350px;
+    width: 350px;
+    float: right;
+    margin-top: 15px;
+  }
+
+
+  button#startButton {
+    font-family: 'Playtime';
+    font-size: 50px;
+    border: 1px solid black;
+    background-color: white;
+    width: 150px;
+    float: right;
+    margin-top: 390px;
+    margin-right: -272px;
+  }
+
+
+  img#pigHome {
+    height: 300px;
+    width: 300px;
+    margin-top: 90px;
+  }
+
+  /*
+    styles for the choose level page
+  */
+  img#farmerID {
+    height: 350px;
+    width: 300px;
+    margin-top: 250px;
+  }
+
+
+  div#farmerMessageDiv {
+    width: 280px;
+    border: 1px solid black;
+    border-radius: 80px;
+    height: 170px;
+    position: absolute;
+    margin-left: 205px;
+    margin-top: -480px;
+    background-color: white;
+  }
+
+
+  p.farmerMessage {
+    width: 240px;
+    text-align: center;
+    font-family: 'playtime';
+    margin-left: 15px;
+    font-size: 20px;
+  }
+
+
+  div#buttonLevel {
+    float: right;
+    background-color: transparent;
+    margin-top: -500px;
+    margin-right: 290px;
+    height: 540px;
+    width: 240px;
+  }
+
+
+  button.levelButton {
+    font-family: 'playtime';
+    border: 1px solid black;
+    background-color: orange;
+    border-radius: 50px;
+    font-size: 40px;
+    margin: 55px;
+    width: 170px;
+    height: 60px;
+  }
+
+
+  div#descDivContainer {
+    float: right;
+    margin-top: -500px;
+    margin-right: -480px;
+    background-color: transparent;
+  }
+
+
+  div.descDiv {
+    width: 240px;
+    height: 150px;
+    background-color: transparent;
+  }
+
+
+  p.levelDesc {
+    text-align: center;
+    width: 250px;
+    font-size: 30px;
+    font-family: 'Playtime';
+    margin-left: 8px;
+  }
+
+
+  /*
+    styles for the transition page
+  */
+
+  img.prize {
+    height: 300px;
+    width: 290px;
+    margin-top: 209px;
+    margin-left: 585px;
+  }
+
+
+  button.nextChallenge {
+    float: right;
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-right: 150px;
+    background-color: white;
+    font-family: 'Playtime';
+  }
+
+
+  div.transitionContainerDiv {
+    height: 800px;
+    width: 500px;
+    float: left;
+    margin-left: 40px;
+    margin-top: -415px;
+    border: none;
+    background-color: transparent;
+  }
+
+
+  div.messageDiv {
+    height: 200px;
+    width: 320px;
+    background: white;
+    border-radius: 100px;
+    float: right;
+    border: 1px solid black;
+    box-sizing: content-box;
+    font-family: 'Playtime';
+    padding-top: 10px;
+  }
+
+
+  p.transitionText {
+    font-size: 25px;
+    text-align: center;
+    width: 290px;
+    margin-top: 30px;
+    margin-left: 16px;
+    font-family: 'Playtime';
+  }
+
+
+  #pig2 {
+    height: 300px;
+    width: 300px;
+  }
+
+  /*
+    styles for the see farm page for the easy level
+  */
+
+
+  #sun *, #sun *:before, #sun *:after{
+    position: absolute;
+  }
+
+  /* code for the rings */
+  .sunRays {
+      background-color: transparent;
+  }
+
+  #rings{
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: transparent;
+  }
+
+  #rings div:before, #rings div:after{
+    content: "";
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    background: inherit;
+  }
+
+  #rings div:before{
+    transform: rotate(60deg);
+  }
+
+  #rings div:after{
+    transform: rotate(-60deg);
+  }
+
+  #rings div:nth-child(even){
+    animation: rotateR 12s infinite linear;
+  }
+
+  #rings div:nth-child(odd){
+    animation: rotateL 12s infinite linear;
+    transform: rotate(15deg);
+  }
+
+  #rings div:nth-child(1){
+    animation-duration: 45s;
+    background: rgba(255, 230, 84, 0.5);
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+  }
+
+  #rings div:nth-child(2){
+    animation-duration: 49s;
+    background: rgba(255, 185, 6, 0.5);
+    width: 190px;
+    height: 190px;
+    margin: -95px 0 0 -95px;
+  }
+
+  #rings div:nth-child(3){
+    animation-duration: 56s;
+    background: rgba(255, 130, 5, 0.5);
+    width: 180px;
+    height: 180px;
+    margin: -90px 0 0 -90px;
+  }
+
+
+  /* animations */
+  @-webkit-keyframes rotateR{
+    from{
+      -webkit-transform: rotate(0deg);
+    }
+    to{
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes rotateR{
+    from{
+      -moz-transform: rotate(0deg);
+    }
+    to{
+      -moz-transform: rotate(360deg);
+    }
+  }
+
+  @-ms-keyframes rotateR{
+    from{
+      -ms-transform: rotate(0deg);
+    }
+    to{
+      -ms-transform: rotate(360deg);
+    }
+  }
+
+  @-o-keygrames rotateR{
+    from{
+      -o-transform: rotate(0deg);
+    }
+    to{
+      -o-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotateR{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes rotateL{
+    from{
+      -webkit-transform: rotate(360deg);
+    }
+    to{
+      -webkit-transform: rotate(0deg);
+    }
+  }
+
+  @-moz-keyframes rotateL{
+    from{
+      -moz-transform: rotate(360deg);
+    }
+    to{
+      -webkit-transform: rotate(0deg);
+    }
+  }
+
+  @-ms-keyframes rotateL{
+    from{
+      -ms-transform: rotate(360deg);
+    }
+    to{
+      -ms-transform: rotate(0deg);
+    }
+  }
+
+  @-o-keyframes rotateL{
+    from{
+      -o-transform: rotate(360deg);
+    }
+    to{
+      -o-transform: rotate(0deg)
+    }
+  }
+
+  @keyframes rotateL{
+    from{
+      transform: rotate(360deg);
+    }
+    to{
+      transform: rotate(0deg);
+    }
+  }
+
+
+  img#farmerPrize {
+    height: 200px;
+    width: 160px;
+    margin-top: 440px;
+    margin-left: 10px;
+  }
+
+  img#barnPrize {
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin-top: -320px;
+    margin-right: 50px;
+  }
+
+
+  img#chickenPrize {
+    height: 70px;
+    width: 50px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 200px;
+  }
+
+
+  button#backHomePrizeButton {
+    float: right;
+    margin-right: -585px;
+    font-size: 30px;
+    margin-top: 60px;
+    background-color: white;
+    font-family: 'Playtime';
+  }
+
+
+  img#treeE {
+    margin-top: -475px;
+    margin-left: 100px;
+    height: 320px;
+    width: 250px;
+  }
+
+  /*
+    styles for the see farm page medium level
+  */
+  #sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 300px;
+    margin-top: -370px;
+    background-color: transparent;
+  }
+
+  img#farmerPrize {
+    height: 200px;
+    width: 160px;
+    margin-top: 450px;
+    margin-left: 10px;
+  }
+
+  img#barnPrize {
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin-top: -460px;
+    margin-right: 20px;
+  }
+
+  img#chickenPrize {
+    height: 70px;
+    width: 50px;
+    float: right;
+    margin-top: -70px;
+    margin-right: 320px;
+  }
+
+
+  img#goatPrize {
+    height: 85px;
+    width: 85px;
+    margin-left: 365px;
+    margin-top: -162px;
+  }
+
+
+  img#cowPrize {
+    height: 90px;
+    width: 85px;
+    float: left;
+    margin-top: -120px;
+    margin-left: 150px;
+  }
+
+
+  img#donkeyPrize {
+    height: 85px;
+    width: 85px;
+    margin-top: -179px;
+    margin-left: 250px;
+  }
+
+
+  img#chickPrizeM {
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin-top: -135px;
+  }
+
+  img#sheepPrizeM {
+    height: 80px;
+    width: 80px;
+    float: right;
+    margin-top: -350px;
+    margin-right: 456px;
+  }
+
+  img#treeM {
+    margin-top: -400px;
+    margin-left: 100px;
+    height: 320px;
+    width: 250px;
+  }
+
+  button#backHomePrizeButton {
+    float: right;
+    margin-right: 66px;
+    font-size: 30px;
+    margin-top: -130px;
+    background-color: white;
+    font-family: 'Playtime';
+  }
+
+  /*
+    styles for see farm hard level
+  */
+  #sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 300px;
+    margin-top: -370px;
+    background-color: transparent;
+  }
+
+  img#farmerPrize {
+    height: 200px;
+    width: 160px;
+    margin-top: 471px;
+    margin-left: 10px;
+  }
+
+  img#barnPrize {
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin-top: -435px;
+  }
+
+  img#chickenPrize {
+    height: 70px;
+    width: 50px;
+    float: right;
+    margin-top: -110px;
+    margin-right: 300px;
+  }
+
+  img#pigPrize {
+    height: 80px;
+    width: 110px;
+    float: right;
+    margin-top: -319px;
+    margin-right: 440px;
+  }
+
+  img#goatPrize {
+    height: 85px;
+    width: 85px;
+    margin-left: 400px;
+    margin-top: -177px;
+  }
+
+  img#cowPrize {
+    height: 90px;
+    width: 85px;
+    float: left;
+    margin-top: -120px;
+    margin-left: 150px;
+  }
+
+  img#donkeyPrize {
+    height: 85px;
+    width: 85px;
+    margin-top: -179px;
+    margin-left: 250px;
+  }
+
+
+  img#duckPrize {
+    height: 75px;
+    width: 60px;
+    margin-left: 350px;
+    margin-top: 25px;
+  }
+
+  img#chickPrize {
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin-top: -105px;
+    margin-right: -15px;
+  }
+
+  img#chickPrizeM {
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin-top: -135px;
+    margin-right: 400px;
+  }
+
+  img#sheepPrizeM {
+    height: 80px;
+    width: 80px;
+    float: right;
+    margin-top: -290px;
+    margin-right: 500px;
+  }
+
+  img#sheepPrize {
+    height: 80px;
+    width: 80px;
+    float: right;
+    margin-top: -359px;
+    margin-right: 850px;
+  }
+
+
+  img#chicken2Prize {
+    height: 60px;
+    width: 50px;
+    float: right;
+    margin-top: -105px;
+    margin-right: 380px;
+  }
+
+
+  img#goat2Prize {
+    height: 80px;
+    width: 70px;
+    float: right;
+    margin-top: -210px;
+    margin-right: 20px;
+  }
+
+  img#tree {
+    margin-top: -500px;
+    margin-left: 100px;
+    height: 320px;
+    width: 250px;
+  }
+
+  img#treeM {
+    margin-top: -400px;
+    margin-left: 100px;
+    height: 320px;
+    width: 250px;
+  }
+
+  button#backHomePrizeButton {
+    float: right;
+    margin-right: 53px;
+    font-size: 30px;
+    margin-top: -70px;
+    background-color: white;
+    font-family: 'Playtime';
+  }
+
+  /*
+    styles for the question-answer mini game
+  */
+  p.question {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 250px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 130px;
+    text-align: center;
+    width: 500px;
+    height: auto;
+    font-family: 'Playtime';
+  }
+
+  p.questionH {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 217px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 70px;
+    padding: 16px;
+    font-size: 130px;
+    text-align: center;
+    width: 555px;
+    height: auto;
+    font-family: 'Playtime';
+  }
+
+  div#userAnswerDiv {
+    background-color: transparent;
+    width: 700px;
+    float: right;
+    margin-top: 43px;
+    margin-right: 17px;
+  }
+
+
+  p.answerInputlabel {
+    display: inline;
+    margin-left: -10px;
+    margin-right: auto;
+    font-size: 25px;
+    font-family: 'Playtime';
+  }
+
+
+  input[type="text"] {
+    font-size: 25px;
+    font-family: 'Playtime';
+  }
+
+
+  #submit {
+    font-size: 23px;
+    background: white;
+    margin-left: 10px;
+    height: 38px;
+    width: 160px;
+    position: absolute;
+    font-family: 'Playtime';
+  }
+
+
+  div.answerDisplay {
+    height: 500px;
+    width: 600px;
+    border: none;
+    float: left;
+    margin-top: 95px;
+    margin-left: 15px;
+    background-color: transparent;
+  }
+
+  div.answerDisplayH {
+    height: 500px;
+    width: 600px;
+    border: none;
+    float: left;
+    margin-top: 95px;
+    margin-left: 15px;
+    background-color: transparent;
+  }
+
+
+  div#answerDiv {
+    height: 165px;
+    width: 240px;
+    display: block;
+    border: 1px solid black;
+    background: white;
+    border-radius: 100px;
+    float: left;
+    position: absolute;
+    margin-left: 235px;
+    margin-top: -50px;
+    box-sizing: content-box;
+  }
+
+
+  #resultC, #resultW {
+    text-align: center;
+    font-size: 60px;
+    line-height: 0px;
+    margin-top: 90px;
+    font-family: 'Playtime';
+  }
+
+
+  #qAInstructions {
+    font-family: 'Playtime';
+    font-size: 23px;
+    line-height: inherit;
+    margin-top: 50px;
+    width: 230px;
+    margin-left: 6px;
+    text-align: center;
+  }
+
+  #pigGame1 {
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: none;
+    background-color: transparent;
+  }
+
+  img.pig {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    display: block;
+  }
+
+  /*
+    styles for the memory game
+  */
+  .mcInstructions{
+    font-family: 'Playtime';
+    margin-left: 20px;
+    font-size: 40px;
+    margin-top: 55px;
+  }
+
+
+  .card {
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+    box-sizing: border-box;
+  }
+
+  .card, .back, .front {
+    height: 150px;
+    width: 150px;
+  }
+
+  .back, .front {
+    position: absolute;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+  }
+
+  .front {
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+    z-index: 2;
+  }
+
+  .back {
+    background-color: orange;
+    box-sizing: border-box;
+  }
+
+  div {
+    box-sizing: border-box;;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  div.game {
+    width: auto;
+    margin-top: 60px;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  div.selected {
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+  }
+
+  .match .back {
+    background-color: white !important;
+    border: 4px solid green;
+  }
+
+  .grid {
+    max-width: 1200px;
+    height: 510px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+  }
+
+  img {
+    height: 120px;
+    width: 100px;
+    display: block;
+    padding: 20px;
+  }
+
+  /*
+    styles for thr multiple choice game
+  */
+  .mCInstructionsContainerDiv {
+    width: 200px;
+    height: 200px;
+    margin-top: 140px;
+    position: absolute;
+    background-color: transparent;
+  }
+
+  #questionMCHardContainer {
+    float: right;
+    display: table;
+    height: 250px;
+    width: 750px;
+    margin-right: 50px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    max-width: 800px;
+  }
+
+  .mCHardImage {
+    margin: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 200px;
+    background-color: transparent;
+  }
+
+  img.pig3 {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin-top: 350px;
+  }
+
+
+  .mCInstructionsDiv {
+    border: 1px solid black;
+    width: 270px;
+    height: 170px;
+    border-radius: 100px;
+    margin-left: 175px;
+    position: absolute;
+    margin-top: 260px;
+    padding: 10px;
+  }
+
+
+  p.multipleChoiceInstructions {
+    font-size: 20px;
+    text-align: center;
+    width: 250px;
+    margin-top: 20px;
+    font-family: 'Playtime';
+  }
+
+
+  .multipleChoiceHardInstructions {
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Playtime';
+  }
+
+  #submitMCButton {
+    margin-top: 650px;
+    margin-left: 730px;
+    background-color: white;
+    font-size: 25px;
+    position: absolute;
+    height: 50px;
+    width: 120px;
+    font-family: 'Playtime';
+  }
+
+
+  #questionEasyMCContainer {
+    float: right;
+    display: table;
+    height: 250px;
+    width: 750px;
+    margin-right: 50px;
+    padding: 15px 15px;
+    border-radius: 50px;
+    max-width: 800px;
+    margin-top: 30px;
+  }
+
+  #questionMCContainer {
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 250px;
+    width: 750px;
+    margin-right: 50px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    max-width: 800px;
+  }
+
+  #questionMCHardContainer {
+    float: right;
+    display: table;
+    height: 250px;
+    width: 750px;
+    margin-right: 50px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    max-width: 800px;
+  }
+
+  .mCImage {
+    margin: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+  }
+
+
+  #optionsMCDiv {
+    background-color: transparent;
+    float: right;
+    width: 733px;
+    display: inline-table;
+    justify-content: center;
+    margin-top: 48px;
+    margin-right: 40px;
+  }
+
+  label {
+    margin: 60px;
+    font-size: 60px;
+    font-family: 'Playtime';
+  }
+
+  input#optionA, input#optionB, input#optionC {
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+  }
+
+  p#mcResultC, p#mCResultW {
+    font-size: 60px;
+    text-align: center;
+    width: 250px;
+    margin-top: 35px;
+    font-family: 'Playtime';
+  }
+
+
+  /*
+    styles for the matching type game
+  */
+  img.pig3 {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin-top: 350px;
+  }
+
+
+  #matchInstructions {
+    font-size: 25px;
+    font-family: 'Playtime';
+    width: 240px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+
+  #numberImage {
+    border: none;
+    float: left;
+    margin-left: 450px;
+    margin-top: 55px;
+    background-color: transparent;
+  }
+
+
+  #numberText {
+    border: none;
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    background-color: transparent;
+  }
+
+  div.error {
+    font-size: 150px;
+    color: red;
+    padding-left: 30px;
+  }
+
+  div.text {
+    background-color: transparent;
+    border: none;
+    width: 170px;
+    height: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    font-family: 'Playtime';
+  }
+
+  div.box {
+    border: 1px solid black;
+    height: 170px;
+    width: 170px;
+  }
+
+  div.numberDiv {
+    height: 170px;
+    width: 170px;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    display: table;
+  }
+
+  /*
+    styles for end of level page
+  */
+  img.prize {
+    height: 300px;
+    width: 290px;
+    margin-top: 209px;
+    margin-left: 585px;
+  }
+
+
+  div#buttonDiv {
+    background-color: transparent;
+    margin-left: 400px;
+    position: absolute;
+    margin-top: 50px;
+    width: 540px;
+  }
+
+  div#buttonEndDiv {
+    background-color: transparent;
+    margin-left: 570px;
+    position: absolute;
+    margin-top: 50px;
+    width: 350px;
+  }
+
+
+  button.nextLevel {
+    float: right;
+    height: 36px;
+    width: 140px;
+    font-size: 25px;
+    margin-top: 14px;
+    margin-right: 28px;
+    background-color: white;
+    font-family: 'Playtime';
+    border: 1px solid black;
+  }
+
+  button#homePage {
+    border: 1px solid black;
+    background-color: white;
+    font-size: 25px;
+    margin: 15px;
+    width: 160px;
+    font-family: 'Playtime';
+  }
+
+  button.seeFarm {
+    border: 1px solid black;
+    background-color: white;
+    font-size: 25px;
+    margin: 15px;
+    width: 140px;
+    font-family: 'Playtime';
+  }
+}

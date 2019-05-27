@@ -1,0 +1,174 @@
+25/03/2018
+  -created the project directory (folders and files)
+  -added images
+
+  Progress:
+  Project has been set-up.
+
+
+01/04/2018
+  -started creating the 1st level of the game
+  -created the functions for creating the ui of the app
+
+  Progress:
+  My project has now a mini-game and the functions to create the UI of the application.
+
+15/04/2018
+  -finished creating the 1st level of the game without the design yet
+
+  Progress:
+  My project has now one mini-game and ready to have more mini-games.
+
+22/04/2018
+  -added more questions to easy level
+  -style(animation) is added to give visual feedback to user when the answer is correct/wrong
+
+  Progress:
+  The first mini-game lasts longer due to additional questions. Also, users are given visual feedback to their answers.
+
+
+24/04/2018
+  -added more images needed for the mini games
+
+  -still working on completing the easy level
+
+  Progress:
+  The images needed to create my application are gathered.
+
+26/04/2018
+  -added a matching type mini game
+
+  Progress:
+  My application has now two mini-games, which will help fulfill its features of having mini-games.
+
+28/04/2018
+  -added a background image
+  -added a transition page when a mini game ends
+  -added styles
+  -connected the 1st mini game to the 2nd mini game
+  -created end-of-mini-game page
+
+  -still working on the matching type game to make it compatible with mobile devices.
+  -still working on adding more mini games
+
+  Progress:
+  My application is looking to be more like a real application due to the background image added, pages added, and transitions.
+
+02/05/2018
+  -still working on a solution for displaying the prizes the user gets after completing the mini-games
+
+  Progress:
+  Some bugs are fixed, and my application has now playable scenes.
+
+04/05/2018
+  -added responsive css
+  -instead of just displaying the answer, the answer is being told by the pig character in the question-answer game
+
+  -still working on improving the design of the mini-games
+  -still working on making the matching game work on mobile phones
+  -still working on adding more levels and mini-games
+
+  Progress:
+  -My app's design is now responsive to mobile devices resolution.
+
+
+05/05/2018
+  -added a memory game
+
+  -still working on improving the design of the mini-games
+  -still working on making the matching game work on mobile phones
+  -still working on adding more levels and mini-games
+
+  Progress:
+  The playability of my app is improved by having another mini game.
+
+08/05/2018
+  -added a multiple question game
+
+  -still working on making the memory game's flipping of cards work properly (images do not appear when clicked)
+  -still working on making the matching game work on mobile phones
+  -still working on adding more levels
+
+  Progress:
+  The playability of my app is improved by having another mini game.
+
+09/05/2018
+  -fixed the problem with flipping of cards in the memory game
+
+  -still working on making the matching game work on mobile phones
+  -still working on fixing the multiple choice mini-game (the question divs are overlapping when another question is loaded)
+  -still working on adding more levels
+
+  Progress:
+  My app has now more playable scenes.
+
+10/05/2018
+  -fixed the problem with overlapping questions and options in the multiple choice mini-game
+
+  -still working on making the matching game work on mobile phones
+  -still working on adding more levels
+
+  Progress:
+  Bugs are fixed, which helped in the improvement of my app.
+
+12/05/2018
+  -randomized the generated questions in the question-answer mini-game
+
+  -still working on making the matching game work on mobile phones
+  -still working on adding more levels
+
+  Progress:
+  Questions in some of the mini-games are randomised.
+
+13/05/2018
+  -checked if all cards in the memory game matched
+  -added transition from completed memory game to end of level Page
+  -added a home Page
+  -added a 'chooseLevel' page
+  -fixed seeFarm page
+  -added instructions to the mini-games
+  -added medium and hard levels
+
+  -still working on making the matching game work on mobile phones
+
+  Progress:
+  My project has now a real app feels due to the pages added.
+
+14/05/2018
+  -fixed the matching game
+  -if-statement is added to check if all cards match in the memory game
+  -completed all levels of all mini-games
+  -added an animation
+
+  -still working on styles
+  -still working on adding more questions and animations
+
+
+  Progress:
+  My project is almost complete because of the completion of all pages.
+
+15/05/2018
+  -randomized question items in the matching type mini-games
+  -added more questions to multiple choice mini-games and matching type mini-games (all levels)
+  -completed all mini-games in all levels
+
+  -still working on making the style responsive to other devices aside from mobile devices.
+
+
+  Progress:
+  My app has all functionalities planned and completed all pages.
+
+
+16/05/2018
+  -made the UI display responsive to web and small devices landscape mode
+
+  -still working on making the style more responsive
+
+    Progress:
+    My app is now more responsive.
+
+17/05/2018
+  -made the UI display responsive to web, tablet, and small devices landscape mode
+
+  Progress:
+  My app is now responsive to three devices.

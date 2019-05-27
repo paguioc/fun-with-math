@@ -1,0 +1,51 @@
+Name, Author, Download Url, Attribution Url, License Type
+
+pig.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/pig-animal-farm-tail-lucky-308577/, CC0
+
+sheep.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/sheep-round-cartoon-face-lamb-47527/, CC0
+
+cow.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/milk-cow-cow-cattle-black-white-297483/, CC0
+
+donkey.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/donkey-mammal-animal-farm-cartoon-310453/, CC0
+
+chicken.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/rooster-cock-cockerel-bird-animal-311361/, CC0
+
+goat.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/goat-farm-animal-rural-animal-297016/, CC0
+
+goat2.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/goat-cartoon-cute-farm-mammal-42973/, CC0
+
+chicken2.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/chicken-baby-yellow-cartoon-stupid-306110/, CC0
+
+egg.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/egg-oval-food-round-157224/, CC0
+
+chick.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/chick-eggshell-easter-chicken-egg-308975/, CC0
+
+duck.png, Clker-Free-Vector-Images, n/a, https://pixabay.com/en/duck-face-standing-odd-strange-312099/, CC0
+
+six.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/glossy-green-number-numbers-1293838/, CC0
+
+five.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/five-glossy-gold-keyword-pictures-1293837/, CC0
+
+two.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/brown-glossy-number-numbers-1293834/, CC0
+
+three.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/glossy-number-numbers-numerals-1293835/, CC0
+
+four.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/four-glossy-light-red-number-1293836/, CC0
+
+one.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/glossy-number-numbers-numerals-one-1293833/, CC0
+
+seven.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/blue-glossy-number-numbers-1293839/, CC0
+
+eight.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/eight-glossy-number-numbers-1293840/, CC0
+
+nine.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/blue-glossy-nine-number-numbers-1293841/, CC0
+
+zero.png, OpenClipart-Vectors, n/a, https://pixabay.com/en/glossy-green-number-numbers-1293832/, CC0
+
+tree.png, OpenClipart-Vectors, n/a,https://pixabay.com/en/cartoon-green-happy-tree-1296497/, CC0
+
+farmer.png, Clker-Free-Vector-Images, n/a,https://pixabay.com/en/farmer-man-blue-overall-surprise-308488/, CC0
+
+bg.png, n/a, https://www.google.com/search?site=imghp&tbm=isch&q=fondo%20de%20pasto%20animado&tbs=sur:fmc#imgrc=AJ1CgpVEzuMYuM:, CC0
+
+Playtime-with-hot-toddies.ttf, Gem Fonts, https://www.fontsquirrel.com/fonts/playtime-with-hot-toddies, Freeware License
